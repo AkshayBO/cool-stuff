@@ -1,91 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Three-Way Comparison</title>
+  <title>List of Items</title>
   <style>
-    body { font-family: Arial, sans-serif; font-size: 14px; }
-    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
-    th, td { border: 1px solid #666; padding: 6px 10px; text-align: left; }
-    th { background-color: #f2f2f2; }
-    tr:nth-child(even) { background-color: #fafafa; }
-    h2 { margin-top: 30px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.4;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .area-header {
+      background-color: #dfe6e9;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>🟢 Three-Way Comparison – Akshay Base Quote vs Akshay Premium Quote vs Sagar Quote</h1>
+
+  <h1>List of Items</h1>
+
   <table>
     <tr>
       <th>Area</th>
+      <th>Sr.No.</th>
       <th>Item Description</th>
-      <th>Akshay Base Quote (Qty / Amt)</th>
-      <th>Akshay Premium Quote (Qty / Amt)</th>
-      <th>Sagar Quote (Qty / Amt)</th>
+      <th>Qty</th>
+      <th>Unit</th>
     </tr>
-    <tr><td>Entrance</td><td>Safety Door – 35 mm block board + Laminate Finish, CNC cut Jaali 4 sqft, lock & handles</td><td>23 sqft / ₹30,820</td><td>23 sqft / ₹30,820</td><td>23 sqft / ₹30,820</td></tr>
-    <tr><td>Entrance</td><td>Entrance Panelling – BWR Ply + Laminate</td><td>24 sqft / ₹16,560</td><td>40 sqft / ₹27,600</td><td>20 sqft / ₹13,800</td></tr>
-    <tr><td>Entrance</td><td>Shoe Rack with seating – BWR Ply + Laminate</td><td>10 sqft / ₹14,200</td><td>10 sqft / ₹14,200</td><td>10 sqft / ₹14,200</td></tr>
-    <tr><td>Entrance</td><td>Console Table (BWR Ply + Laminate)</td><td>–</td><td>–</td><td>12.75 sqft / ₹18,105</td></tr>
-    <tr><td>Entrance</td><td>Removing of existing door for hidden door purpose</td><td>–</td><td>1 nos / ₹1,200</td><td>1 nos / ₹3,500</td></tr>
-    <tr><td>Entrance</td><td>Hidden Door provision with panelling</td><td>–</td><td>28 sqft / ₹18,200</td><td>–</td></tr>
-    <tr><td>Entrance</td><td>Frame for existing door flip</td><td>–</td><td>–</td><td>1 nos / ₹11,700</td></tr>
-    <tr><td>Foyer</td><td>Molding design over wall</td><td>40 nos / ₹7,200</td><td>40 nos / ₹7,200</td><td>40 sqft / ₹8,000</td></tr>
-    <tr><td>Living</td><td>TV Unit Ledge – BWR Ply + Laminate</td><td>8 sqft / ₹11,920</td><td>10 sqft / ₹14,900</td><td>8 sqft / ₹11,413</td></tr>
-    <tr><td>Living</td><td>TV Panelling – BWR Ply + Laminate</td><td>48 sqft / ₹33,120</td><td>90 sqft / ₹62,100</td><td>53 sqft / ₹36,611</td></tr>
-    <tr><td>Living</td><td>Sofa (fabric finish, 3+2, 40kg/m³ foam)</td><td>13 rft / ₹55,900</td><td>13 rft / ₹55,900</td><td>13 rft / ₹55,900</td></tr>
-    <tr><td>Living</td><td>Shelf in BWR Ply + Laminate</td><td>–</td><td>–</td><td>7 rft / ₹4,550</td></tr>
-    <tr><td>Living</td><td>Center Table (as per design, up to ₹10,000)</td><td>1 nos / ₹10,000</td><td>1 nos / ₹10,000</td><td>1 nos / ₹10,000</td></tr>
-    <tr><td>Living</td><td>Wallpaper – molding design</td><td>40 nos / ₹7,200</td><td>40 nos / ₹7,200</td><td>–</td></tr>
-    <tr><td>Living</td><td>False ceiling – Punning with groove design</td><td>–</td><td>100 sqft / ₹8,000</td><td>–</td></tr>
-    <tr><td>Dining</td><td>4 Seater Dining – MS Frame + Marble Top / Sal Wood finish, Hydraulic chairs with cushion</td><td>1 nos / ₹34,500</td><td>1 nos / ₹34,500</td><td>1 nos / ₹34,500</td></tr>
-    <tr><td>Kitchen</td><td>Demolition of existing kitchen</td><td>–</td><td>1 nos / ₹8,500</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Dado tiles (up to ₹65/sqft)</td><td>–</td><td>42 sqft / ₹9,870</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Quartz platform (up to ₹450/sqft, 2 sheets)</td><td>–</td><td>42 sqft / ₹84,000</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Base Units – BWP Ply + Laminate finish, Onyx tandom</td><td>35 sqft / ₹112,320</td><td>–</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Base Units – BWP Ply + Acrylic finish, Hettich tandom</td><td>–</td><td>34 sqft / ₹145,125</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Base Units – BWR Ply + Laminate finish</td><td>–</td><td>–</td><td>27 sqft / ₹28,350</td></tr>
-    <tr><td>Kitchen</td><td>Overhead Units – BWR Ply + Laminate</td><td>26.4 sqft / ₹43,560</td><td>–</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Overhead Units – BWR Ply + Acrylic</td><td>–</td><td>26.4 sqft / ₹46,200</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Overhead Units – Laminate</td><td>–</td><td>–</td><td>26.4 sqft / ₹39,600</td></tr>
-    <tr><td>Kitchen</td><td>Shutters for Chimney – Laminate finish</td><td>3 sqft / ₹2,850</td><td>–</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Shutters for Chimney – Acrylic finish</td><td>–</td><td>3 sqft / ₹3,150</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Shutters for Chimney – Laminate finish (image)</td><td>–</td><td>–</td><td>3 sqft / ₹2,700</td></tr>
-    <tr><td>Kitchen</td><td>Lofts Units – BWR Ply + Laminate</td><td>30 sqft / ₹39,000</td><td>–</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Lofts Units – BWR Ply + Acrylic</td><td>–</td><td>30 sqft / ₹43,500</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Lofts Units – Laminate</td><td>–</td><td>–</td><td>30 sqft / ₹33,000</td></tr>
-    <tr><td>Kitchen</td><td>Appliances Unit – BWR Ply + Laminate</td><td>14 sqft / ₹20,300</td><td>–</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Appliances Unit – BWR Ply + Acrylic</td><td>–</td><td>14 sqft / ₹21,000</td><td>–</td></tr>
-    <tr><td>Kitchen</td><td>Appliances Unit – Laminate</td><td>–</td><td>–</td><td>14 sqft / ₹17,500</td></tr>
-    <tr><td>Master BR</td><td>King Size Bed with Hydraulic Storage (6’x6’6”)</td><td>39 sqft / ₹48,360</td><td>39 sqft / ₹48,360</td><td>39 sqft / ₹48,360</td></tr>
-    <tr><td>Master BR</td><td>Upholstered Bed Back (6’x2’)</td><td>12 sqft / ₹10,320</td><td>12 sqft / ₹10,320</td><td>12 sqft / ₹10,320</td></tr>
-    <tr><td>Master BR</td><td>Sliding Wardrobe (6’x7’)</td><td>42 sqft / ₹68,460</td><td>42 sqft / ₹68,460</td><td>42 sqft / ₹68,460</td></tr>
-    <tr><td>Master BR</td><td>Overhead Loft Framing (6’x2’)</td><td>12 sqft / ₹14,520</td><td>12 sqft / ₹14,520</td><td>12 sqft / ₹14,520</td></tr>
-    <tr><td>Master BR</td><td>Side Shelfs</td><td>8 sqft / ₹5,200</td><td>8 sqft / ₹5,200</td><td>8 sqft / ₹5,200</td></tr>
-    <tr><td>Master BR</td><td>Dresser Unit</td><td>10 sqft / ₹14,500</td><td>10 sqft / ₹14,500</td><td>–</td></tr>
-    <tr><td>Master BR</td><td>Study Unit</td><td>9 sqft / ₹11,250</td><td>9 sqft / ₹11,250</td><td>9 sqft / ₹11,250</td></tr>
-    <tr><td>Master BR</td><td>Vanity (BWP Ply + Laminate)</td><td>–</td><td>10 sqft / ₹14,000</td><td>–</td></tr>
-    <tr><td>Master BR</td><td>Mirror with chamfer finish</td><td>–</td><td>10 sqft / ₹5,300</td><td>8 sqft / ₹4,240</td></tr>
-    <tr><td>Child BR</td><td>Queen Size Bed with Hydraulic Storage (5’x6’6”)</td><td>33 sqft / ₹40,300</td><td>33 sqft / ₹40,300</td><td>33 sqft / ₹40,300</td></tr>
-    <tr><td>Child BR</td><td>Upholstered Bed Back (5’x2’)</td><td>10 sqft / ₹8,600</td><td>10 sqft / ₹8,600</td><td>10 sqft / ₹8,600</td></tr>
-    <tr><td>Child BR</td><td>Side Table</td><td>1 nos / ₹4,200</td><td>1 nos / ₹4,200</td><td>–</td></tr>
-    <tr><td>Child BR</td><td>Sliding Wardrobe (6’x7’)</td><td>42 sqft / ₹68,460</td><td>42 sqft / ₹68,460</td><td>42 sqft / ₹68,460</td></tr>
-    <tr><td>Child BR</td><td>Overhead Loft Framing</td><td>12 sqft / ₹14,520</td><td>12 sqft / ₹14,520</td><td>12 sqft / ₹14,520</td></tr>
-    <tr><td>Child BR</td><td>Side Shelfs</td><td>8 sqft / ₹5,200</td><td>8 sqft / ₹5,200</td><td>8 sqft / ₹5,200</td></tr>
-    <tr><td>Balcony</td><td>Polycarbonate Sheet with MS Frame</td><td>–</td><td>75 sqft / ₹24,750</td><td>–</td></tr>
-    <tr><td>Balcony</td><td>Invisible Grill</td><td>–</td><td>90 sqft / ₹18,000</td><td>–</td></tr>
-    <tr><td>Balcony</td><td>Box Fabrication for Windows</td><td>–</td><td>35 sqft / ₹8,400</td><td>–</td></tr>
-    <tr><td>Others</td><td>False Ceiling (Full House)</td><td>468 sqft / ₹36,504</td><td>468 sqft / ₹36,504</td><td>468 sqft / ₹36,504</td></tr>
-    <tr><td>Others</td><td>Coves in False Ceiling</td><td>238 sqft / ₹16,184</td><td>238 sqft / ₹16,184</td><td>238 sqft / ₹16,184</td></tr>
-    <tr><td>Others</td><td>Punning with Groove Design</td><td>–</td><td>100 sqft / ₹8,000</td><td>–</td></tr>
-    <tr><td>Others</td><td>Electrical Shifting & New Points</td><td>45 sqft / ₹35,550</td><td>45 sqft / ₹35,550</td><td>45 sqft / ₹35,550</td></tr>
-    <tr><td>Others</td><td>Ceiling Paint – Tractor Emulsion</td><td>624 sqft / ₹13,728</td><td>624 sqft / ₹13,728</td><td>624 sqft / ₹13,728</td></tr>
-    <tr><td>Others</td><td>Wall Paint – Luster Paint</td><td>1373 sqft / ₹41,184</td><td>1373 sqft / ₹41,184</td><td>1373 sqft / ₹41,184</td></tr>
-    <tr><td>Others</td><td>Wallpaper (up to ₹4000/-)</td><td>1 nos / ₹5,500</td><td>1 nos / ₹5,500</td><td>1 nos / ₹5,500</td></tr>
-    <tr><td>Others</td><td>Glass – Mirror with Chamfer Finish</td><td>10 sqft / ₹5,300</td><td>10 sqft / ₹5,300</td><td>8 sqft / ₹4,240</td></tr>
-    <tr><td>Others</td><td>Carpentry – Vanity</td><td>10 sqft / ₹14,000</td><td>10 sqft / ₹14,000</td><td>–</td></tr>
-    <tr><td>Others</td><td>All 3D & 2D Working Drawings</td><td>1 nos / ₹25,000</td><td>1 nos / ₹25,000</td><td>1 nos / ₹25,000</td></tr>
-    <tr><td>Others</td><td>Floor Protection – 2mm Bubble Sheet</td><td>1 nos / ₹5,000</td><td>1 nos / ₹5,000</td><td>1 nos / ₹5,000</td></tr>
-    <tr><td>Others</td><td>Debris Removal</td><td>2 nos / ₹7,000</td><td>2 nos / ₹7,000</td><td>2 nos / ₹7,000</td></tr>
+
+    <!-- ENTRANCE -->
+    <tr><td class="area-header" colspan="5">ENTRANCE</td></tr>
+    <tr><td>Carpentary</td><td>1</td><td>Safety Door, In 35 mm thick Board + Laminate Finish, CNC cut Metal Jaali 4 sqft, Latch lock and SS handles</td><td>23</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>2</td><td>Entrance Panelling – BWR Grade ply + Laminate</td><td>40</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>3</td><td>Shoe rack with seating in BWR grade ply + laminate finish</td><td>10</td><td>Sqft</td></tr>
+
+    <!-- LIVING -->
+    <tr><td class="area-header" colspan="5">LIVING</td></tr>
+    <tr><td>Carpentary</td><td>4</td><td>TV Unit Ledge – BWR Grade Ply + Laminate (Size 10'x 1') and 5 drawers at the bottom</td><td>10</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>5</td><td>TV panelling in BWR grade ply + Laminate (10' x 9')</td><td>90</td><td>Sqft</td></tr>
+    <tr><td>Cushion</td><td>6</td><td>Sofa with fabric finish with 40kg/m³ foam density (3+2)</td><td>13</td><td>Rft</td></tr>
+    <tr><td>False ceiling</td><td>7</td><td>Punning with groove design</td><td>100</td><td>Sqft</td></tr>
+    <tr><td>Loose Items</td><td>8</td><td>Center table as per design</td><td>1</td><td>Nos</td></tr>
+    <tr><td>Wallpaper</td><td>9</td><td>Molding design over wall</td><td>40</td><td>Nos</td></tr>
+    <tr><td>Loose Items</td><td>10</td><td>4 seater dining in MS Frame with marble top / sal wood finish / Hydraulic 4 chairs with cushion</td><td>1</td><td>Nos</td></tr>
+    <tr><td>Carpentary</td><td>11</td><td>Mandir Unit – BWR grade ply + Laminate finish + CNC cutting jaali design-2</td><td>14</td><td>Sqft</td></tr>
+
+    <!-- BALCONY -->
+    <tr><td class="area-header" colspan="5">BALCONY</td></tr>
+    <tr><td>Fabrication</td><td>12</td><td>Polycarbonate sheet with MS frame fabrication</td><td>75</td><td>Sqft</td></tr>
+    <tr><td>Fabrication</td><td>13</td><td>Invisible grill</td><td>90</td><td>Sqft</td></tr>
+
+    <!-- KITCHEN -->
+    <tr><td class="area-header" colspan="5">KITCHEN</td></tr>
+    <tr><td>Modular</td><td>15</td><td>Full modular Base Units – BWP Grade Ply + Acrylic finish (5 Tandem Drawers, pullout, dustbin accessories, Hettich tandem)</td><td>34</td><td>Sqft</td></tr>
+    <tr><td>Modular</td><td>16</td><td>Overhead Units – BWR Grade Ply + Acrylic, 2 profile shutters, 1 shelf in every storage</td><td>26.4</td><td>Sqft</td></tr>
+    <tr><td>Modular</td><td>17</td><td>Shutters for chimney in Acrylic finish</td><td>3</td><td>Sqft</td></tr>
+    <tr><td>Modular</td><td>18</td><td>Lofts Units – BWR Grade Ply + Acrylic</td><td>30</td><td>Sqft</td></tr>
+    <tr><td>Modular</td><td>19</td><td>Appliances unit in BWR Grade ply + Acrylic finish</td><td>14</td><td>Sqft</td></tr>
+
+    <!-- MASTER BEDROOM -->
+    <tr><td class="area-header" colspan="5">MASTER BEDROOM</td></tr>
+    <tr><td>Carpentary</td><td>20</td><td>King Size Bed with Hydraulic Storage (5'x 6'6") in BWR Grade Ply + Laminate</td><td>39</td><td>Sqft</td></tr>
+    <tr><td>Fabric</td><td>21</td><td>Upholstered bed back with fabric as per selection (6' x 2')</td><td>12</td><td>Sqft</td></tr>
+    <tr><td>Wallpapers</td><td>22</td><td>Wallpaper as per selection (ranges up to ₹4000/-)</td><td>1</td><td>Nos</td></tr>
+    <tr><td>Carpentary</td><td>23</td><td>Sliding Wardrobe (6' x 7’) in BWR Grade Ply + Laminate – Max 4 Drawers and 4 shelves</td><td>42</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>24</td><td>Overhead Loft Framing (6'x2') in BWR Grade Ply + Laminate</td><td>12</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>25</td><td>Side shelves in BWR Grade ply + laminate finish</td><td>8</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>26</td><td>Dresser unit in BWR Grade ply + Mirror with chamfer finish</td><td>10</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>27</td><td>Study unit with bookshelf in BWR Grade Ply + Laminate (3' x 1'), 1 drawer, ledge, openable storage (2' x 3')</td><td>9</td><td>Sqft</td></tr>
+
+    <!-- CHILD BEDROOM -->
+    <tr><td class="area-header" colspan="5">CHILD BEDROOM</td></tr>
+    <tr><td>Carpentary</td><td>28</td><td>Queen Size Bed with Hydraulic Storage (5'x 6'6") in BWR Grade Ply + Laminate</td><td>33</td><td>Sqft</td></tr>
+    <tr><td>Fabric</td><td>29</td><td>Upholstered bed back with fabric as per selection (5' x 2')</td><td>10</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>30</td><td>Side table with 1 drawer in BWR Grade Ply + Laminate</td><td>1</td><td>Nos</td></tr>
+    <tr><td>Wallpapers</td><td>31</td><td>Wallpaper as per selection (ranges up to ₹4000/-)</td><td>1</td><td>Nos</td></tr>
+    <tr><td>Carpentary</td><td>32</td><td>Sliding Wardrobe (6' x 7’) in BWR Grade Ply + Laminate – Max 4 Drawers and 4 shelves</td><td>42</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>33</td><td>Overhead Loft Framing (6'x2') in BWR Grade Ply + Laminate</td><td>12</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>34</td><td>Side shelves in BWR Grade Ply + Laminate finish</td><td>8</td><td>Sqft</td></tr>
+    <tr><td>Mirror</td><td>35</td><td>Mirror with chamfer finish</td><td>8</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>36</td><td>Study unit with bookshelf in BWR Grade Ply + Laminate (3' x 1'), 1 drawer, ledge, openable storage (2' x 3')</td><td>9</td><td>Sqft</td></tr>
+
+    <!-- OTHERS -->
+    <tr><td class="area-header" colspan="5">OTHERS</td></tr>
+    <tr><td>False ceiling</td><td>37</td><td>False Ceiling in full house</td><td>468</td><td>Sqft</td></tr>
+    <tr><td>False ceiling</td><td>38</td><td>Coves in false ceiling</td><td>238</td><td>Sqft</td></tr>
+    <tr><td>Electrical</td><td>39</td><td>Electrical Shifting & New Points + New light points (incl. material & wires, lights excluded)</td><td>45</td><td>Sqft</td></tr>
+    <tr><td>Paint</td><td>40</td><td>Ceiling Paint, Royal</td><td>624</td><td>Sqft</td></tr>
+    <tr><td>Paint</td><td>41</td><td>Wall Paint, Royal</td><td>1373</td><td>Sqft</td></tr>
+    <tr><td>Carpentary</td><td>42</td><td>Vanity in BWP ply + Laminate finish common basin</td><td>10</td><td>Sqft</td></tr>
+    <tr><td>Glass</td><td>43</td><td>Mirror with chamfer finish</td><td>10</td><td>Sqft</td></tr>
   </table>
+
+  <h2>Material Specification</h2>
+  <p><strong>Ply:</strong> BWR Grade ply IS 303 and BWP ply 710, 18mm, 12mm and 8mm Ply</p>
+  <p><strong>Laminate:</strong> 1mm Laminate - SF, Matt, High gloss Finish, Merino / Green lam</p>
+  <p><strong>Hinges:</strong> Soft close Auto Hinges, Hettich</p>
+
 </body>
 </html>
