@@ -1,141 +1,170 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Pebbles Interio – Akshay Premium Quote (Full)</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Spacewell (Excel) vs Pebbles (PDF) – Full Comparison</title>
 <style>
   :root {
-    --bg: #0b1020; --card:#11162a; --muted:#9aa4b2; --text:#e8ecf2; --accent:#5ac4ff; --border:#24314d;
+    --bg: #0b1020;
+    --card: #121735;
+    --muted: #9aa3b2;
+    --txt: #e9edf5;
+    --pos: #13c27a;
+    --neg: #ff5d5d;
+    --zero:#8fb4ff;
+    --accent: #7aa2ff;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text);}
-  header { padding:24px; border-bottom:1px solid var(--border); background:linear-gradient(0deg, rgba(90,196,255,0.08), transparent);}
-  h1 { margin:0 0 4px 0; font-size:24px; }
-  .meta { color:var(--muted); font-size:14px; }
-  .container { padding:24px; max-width:1200px; margin:0 auto; }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow: 0 8px 24px rgba(0,0,0,0.24);}
-  table { width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--border); border-radius:12px; background:#0f1528; }
-  thead th { position:sticky; top:0; background:#0f1a33; color:#c9d6e6; text-align:left; padding:12px; font-weight:600; border-bottom:1px solid var(--border);}
-  tbody td { padding:10px 12px; border-bottom:1px dashed rgba(255,255,255,0.04);}
-  tbody tr:nth-child(odd) td { background:rgba(255,255,255,0.01);}
-  .num { text-align:right; white-space:nowrap; }
-  .badge { display:inline-block; padding:2px 8px; border:1px solid var(--border); border-radius:999px; color:#cfe9ff; background:rgba(90,196,255,0.08); font-size:12px; }
-  .totals { display:grid; gap:8px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top:16px; }
-  .totals .tile { background:#0f1528; border:1px solid var(--border); border-radius:12px; padding:12px; }
-  .totals .label { color:var(--muted); font-size:12px; }
-  .totals .value { font-size:18px; font-weight:700; }
-  footer { color:var(--muted); font-size:12px; padding:16px 0; }
+  html,body { background: var(--bg); color: var(--txt); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; margin:0; }
+  .wrap { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+  h1 { font-size: 1.5rem; margin: 0 0 8px; }
+  .sub { color: var(--muted); margin-bottom: 20px; }
+  .summary {
+    display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0,1fr));
+    background: var(--card); padding: 16px; border-radius: 14px; margin-bottom: 16px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 6px 16px rgba(0,0,0,0.35);
+  }
+  .summary .k { color: var(--muted); font-size: .85rem; margin-bottom: 6px; }
+  .summary .v { font-weight: 700; font-size: 1.1rem; letter-spacing: .2px; }
+  .v.pos { color: var(--pos); }
+  .v.neg { color: var(--neg); }
+  .v.zero { color: var(--zero); }
+  .card { background: var(--card); border-radius: 14px; overflow: hidden; box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 8px 22px rgba(0,0,0,0.35); }
+  .table-wrap { overflow: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    position: sticky; top: 0; z-index: 1;
+    background: #18224a; color: #dbe6ff; text-align: left; font-weight: 700; font-size: .9rem;
+    padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  tbody td { padding: 11px 14px; border-bottom: 1px dashed rgba(255,255,255,0.07); vertical-align: top; }
+  tbody tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+  .section-row td {
+    background: #0f1533; color: #cfe0ff; font-weight: 700; letter-spacing: .25px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .money { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .diff.pos { color: var(--pos); font-weight: 700; }
+  .diff.neg { color: var(--neg); font-weight: 700; }
+  .diff.zero { color: var(--zero); font-weight: 700; }
+  .note { color: var(--muted); font-size: .9rem; margin-top: 12px; }
+  .badge { background: #1c2757; color: #bcd3ff; padding: 2px 8px; border-radius: 999px; font-size: .75rem; margin-left: 6px; }
 </style>
 </head>
 <body>
-  <h1>PEBBLES INTERIO — Premium Quotation (Akshay)</h1>
-  <div>Ref: PB/QT/RI-2023/24 • Date: 26/08/2025 • Aundh, Pune 411045 • pebblesinterio01@gmail.com • 9527733976 / 8796074801</div>
+<div class="wrap">
+  <h1>Spacewell (Excel) vs Pebbles (PDF) – Full Comparison</h1>
+  <div class="sub">All sections included, with per-item differences. Amounts in ₹ INR. Difference = PDF − Excel.</div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Area</th>
-        <th>Category</th>
-        <th>Item Description</th>
-        <th class="center">Qty</th>
-        <th class="center">Unit</th>
-        <th class="right">Rate</th>
-        <th class="right">Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-    <!-- ENTRANCE -->
-    <tr class="area"><td colspan="7">ENTRANCE</td></tr>
-    <tr><td>ENTRANCE</td><td>Carpentary</td><td>Safety Door, In 35 mm thick Board + Laminate Finish, CNC cut Metal Jaali 4 sqft, Latch lock and SS handles</td><td class="center">23</td><td class="center">Sqft</td><td class="right">₹1,340.00</td><td class="right">₹30,820.00</td></tr>
-    <tr><td>ENTRANCE</td><td>Carpentary</td><td>Entrance Panelling- BWR Grade ply + Laminate</td><td class="center">40</td><td class="center">Sqft</td><td class="right">₹690.00</td><td class="right">₹27,600.00</td></tr>
-    <tr><td>ENTRANCE</td><td>Carpentary</td><td>Shoe rack with seating in BWR grade ply + laminate finish</td><td class="center">10</td><td class="center">Sqft</td><td class="right">₹1,420.00</td><td class="right">₹14,200.00</td></tr>
-    <tr><td>ENTRANCE</td><td>Carpentary</td><td>Removing of existing door for hidden door purpose</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹1,200.00</td><td class="right">₹1,200.00</td></tr>
-    <tr><td>ENTRANCE</td><td>Carpentary</td><td>Hidden door provision with panelling</td><td class="center">28</td><td class="center">Sqft</td><td class="right">₹650.00</td><td class="right">₹18,200.00</td></tr>
+  <!-- Grand totals (precomputed) -->
+  <div class="summary">
+    <div>
+      <div class="k">Excel Total</div>
+      <div class="v">₹ 9,63,850</div>
+    </div>
+    <div>
+      <div class="k">PDF Total</div>
+      <div class="v">₹ 9,25,965</div>
+    </div>
+    <div>
+      <div class="k">Net Difference (PDF − Excel)</div>
+      <!-- Negative means PDF is cheaper -->
+      <div class="v neg">− ₹ 37,885</div>
+    </div>
+  </div>
 
-    <!-- LIVING -->
-    <tr class="area"><td colspan="7">LIVING</td></tr>
-    <tr><td>LIVING</td><td>Carpentary</td><td>TV Unit Ledge - BWR Grade Ply + Laminate (Size 10'x 1') and 5 drawers at the bottom</td><td class="center">10</td><td class="center">Sqft</td><td class="right">₹1,490.00</td><td class="right">₹14,900.00</td></tr>
-    <tr><td>LIVING</td><td>Carpentary</td><td>TV panelling in BWR grade ply + Laminate (10' x 9')</td><td class="center">90</td><td class="center">Sqft</td><td class="right">₹690.00</td><td class="right">₹62,100.00</td></tr>
-    <tr><td>LIVING</td><td>Cushion</td><td>Sofa with fabric finish with 40kg/m³ foam density(3+2)</td><td class="center">13</td><td class="center">Rft</td><td class="right">₹4,300.00</td><td class="right">₹55,900.00</td></tr>
-    <tr><td>LIVING</td><td>False ceiling</td><td>Punning with groove design</td><td class="center">100</td><td class="center">Sqft</td><td class="right">₹80.00</td><td class="right">₹8,000.00</td></tr>
-    <tr><td>LIVING</td><td>Loose Items</td><td>Center table as per design selection upto 10000/-</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹10,000.00</td><td class="right">₹10,000.00</td></tr>
-    <tr><td>LIVING</td><td>Wallpaper</td><td>Molding design over wall</td><td class="center">40</td><td class="center">Nos</td><td class="right">₹180.00</td><td class="right">₹7,200.00</td></tr>
-    <tr><td>LIVING</td><td>Loose Items</td><td>Mandir Unit- BWR grade ply + Laminate finish + CNC cutting jaali design-2</td><td class="center">14</td><td class="center">Sqft</td><td class="right">₹1,620.00</td><td class="right">₹22,680.00</td></tr>
+  <div class="card table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:140px;">Section</th>
+          <th>Item Description</th>
+          <th style="width:140px;">Excel Price (₹)</th>
+          <th style="width:140px;">PDF Price (₹)</th>
+          <th style="width:140px;">Difference (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
 
-    <!-- DINING -->
-    <tr class="area"><td colspan="7">DINING</td></tr>
-    <tr><td>DINING</td><td>Loose Items</td><td>4 seater dining in MS Frame with marbal top or in sal wood finish/Compact/Hydraulic 4 chairs with cushion on top</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹34,500.00</td><td class="right">₹34,500.00</td></tr>
+        <!-- ENTRANCE -->
+        <tr class="section-row"><td colspan="5">ENTRANCE</td></tr>
+        <tr><td>Entrance</td><td>Safety Door – 35 mm + Laminate + CNC Jaali</td><td class="money">26,450</td><td class="money">30,820</td><td class="money diff pos">+4,370</td></tr>
+        <tr><td>Entrance</td><td>Entrance Panelling – BWR Ply + Laminate</td><td class="money">36,000</td><td class="money">24,150</td><td class="money diff neg">−11,850</td></tr>
+        <tr><td>Entrance</td><td>Shoe Rack with seating</td><td class="money">12,000</td><td class="money">14,200</td><td class="money diff pos">+2,200</td></tr>
 
-    <!-- BALCONY / FABRICATION -->
-    <tr class="area"><td colspan="7">BALCONY / FABRICATION</td></tr>
-    <tr><td>BALCONY</td><td>Fabrication</td><td>Polycarbonatesheet with MS frame fabrication</td><td class="center">75</td><td class="center">Sqft</td><td class="right">₹330.00</td><td class="right">₹24,750.00</td></tr>
-    <tr><td>BALCONY</td><td>Fabrication</td><td>Invisible grill</td><td class="center">90</td><td class="center">Sqft</td><td class="right">₹200.00</td><td class="right">₹18,000.00</td></tr>
-    <tr><td>BALCONY</td><td>Fabrication</td><td>Box fabrication for windows</td><td class="center">35</td><td class="center">Sqft</td><td class="right">₹240.00</td><td class="right">₹8,400.00</td></tr>
+        <!-- LIVING -->
+        <tr class="section-row"><td colspan="5">LIVING</td></tr>
+        <tr><td>Living</td><td>TV Unit Ledge – 10’×1’ + 5 drawers</td><td class="money">15,000</td><td class="money">14,900</td><td class="money diff neg">−100</td></tr>
+        <tr><td>Living</td><td>TV Panelling – 10’ × 8’6’’</td><td class="money">63,000</td><td class="money">58,650</td><td class="money diff neg">−4,350</td></tr>
+        <tr><td>Living</td><td>Sofa (3+2, fabric, 40kg/m³ foam)</td><td class="money">54,600</td><td class="money">55,900</td><td class="money diff pos">+1,300</td></tr>
+        <tr><td>Living</td><td>False Ceiling – Groove design</td><td class="money">7,000</td><td class="money">8,000</td><td class="money diff pos">+1,000</td></tr>
+        <tr><td>Living</td><td>Center Table</td><td class="money">6,000</td><td class="money">10,000</td><td class="money diff pos">+4,000</td></tr>
+        <tr><td>Living</td><td>Wallpaper – Molding design</td><td class="money">5,000</td><td class="money">7,200</td><td class="money diff pos">+2,200</td></tr>
 
-    <!-- KITCHEN -->
-    <tr class="area"><td colspan="7">KITCHEN</td></tr>
-    <tr><td>KITCHEN</td><td>Civil</td><td>Demolition of existing kitchen</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹8,500.00</td><td class="right">₹8,500.00</td></tr>
-    <tr><td>KITCHEN</td><td>Civil</td><td>Supply and installation of new dado tiles selection ranges upto 65 rs sqft</td><td class="center">42</td><td class="center">Sqft</td><td class="right">₹235.00</td><td class="right">₹9,870.00</td></tr>
-    <tr><td>KITCHEN</td><td>Civil</td><td>Supply and installation of new quarts platform selection ranges upto 450 rs sqft (2 quartz sheet needed)</td><td class="center">42</td><td class="center">Sqft</td><td class="right">₹2,000.00</td><td class="right">₹84,000.00</td></tr>
-    <tr><td>KITCHEN</td><td>Modular</td><td>Full modular Base Units - BWP Grade Ply + Acrylic finish (5 Tandom Drawers ...)</td><td class="center">34</td><td class="center">Sqft</td><td class="right">₹4,268.38</td><td class="right">₹145,125.00</td></tr>
-    <tr><td>KITCHEN</td><td>Modular</td><td>Overhead Units - BWR Grade Ply + Acrylic, 2 profile shutters, 1 shelf in every storage</td><td class="center">26.4</td><td class="center">Sqft</td><td class="right">₹1,750.00</td><td class="right">₹46,200.00</td></tr>
-    <tr><td>KITCHEN</td><td>Modular</td><td>Shutters for chimney in Acrylic finish</td><td class="center">3.0</td><td class="center">Sqft</td><td class="right">₹1,050.00</td><td class="right">₹3,150.00</td></tr>
-    <tr><td>KITCHEN</td><td>Modular</td><td>Lofts Units - BWR Grade Ply + Acrylic</td><td class="center">30.0</td><td class="center">Sqft</td><td class="right">₹1,450.00</td><td class="right">₹43,500.00</td></tr>
-    <tr><td>KITCHEN</td><td>Modular</td><td>Appliances unit in BWR Grade ply + Acrylic finish</td><td class="center">14.0</td><td class="center">Sqft</td><td class="right">₹1,500.00</td><td class="right">₹21,000.00</td></tr>
+        <!-- DINING -->
+        <tr class="section-row"><td colspan="5">DINING</td></tr>
+        <tr><td>Dining</td><td>Dining Table (MS + Marble top)</td><td class="money">40,000</td><td class="money">—</td><td class="money diff neg">−40,000</td></tr>
+        <tr><td>Dining</td><td>Mandir Unit – CNC Jaali, Laminate</td><td class="money">25,200</td><td class="money">22,680</td><td class="money diff neg">−2,520</td></tr>
 
-    <!-- MASTER BEDROOM -->
-    <tr class="area"><td colspan="7">MASTER BEDROOM</td></tr>
-    <tr><td>MASTER BEDROOM</td><td>Carpentary</td><td>King Size Bed with Hydraulic Storage of size 6'x 6'6\" in BWR Grade Ply + Laminate</td><td class="center">39</td><td class="center">Sqft</td><td class="right">₹1,240.00</td><td class="right">₹48,360.00</td></tr>
-    <tr><td>MASTER BEDROOM</td><td>Fabric</td><td>Upholstered bed back with fabric as per selection (6' X 2')</td><td class="center">12</td><td class="center">Sqft</td><td class="right">₹860.00</td><td class="right">₹10,320.00</td></tr>
-    <tr><td>MASTER BEDROOM</td><td>Wallpapers</td><td>Wallpaper as per selection ranges upto 4000/-</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹5,500.00</td><td class="right">₹5,500.00</td></tr>
-    <tr><td>MASTER BEDROOM</td><td>Carpentary</td><td>Sliding Wardrobe (6' x 7’) in BWR Grade Ply + Laminate - Max 4 Drawers and 4 shelfs</td><td class="center">42</td><td class="center">Sqft</td><td class="right">₹1,630.00</td><td class="right">₹68,460.00</td></tr>
-    <tr><td>MASTER BEDROOM</td><td>Carpentary</td><td>Overhead Loft Framing(6'x2') in BWR Grade Ply + Laminate</td><td class="center">12</td><td class="center">Sqft</td><td class="right">₹1,210.00</td><td class="right">₹14,520.00</td></tr>
-    <tr><td>MASTER BEDROOM</td><td>Carpentary</td><td>Side shelfs in BWR Grade ply + laminate finish</td><td class="center">8</td><td class="center">Sqft</td><td class="right">₹650.00</td><td class="right">₹5,200.00</td></tr>
+        <!-- BALCONY / FABRICATION -->
+        <tr class="section-row"><td colspan="5">BALCONY / FABRICATION</td></tr>
+        <tr><td>Balcony</td><td>Polycarbonate Sheet + MS Frame</td><td class="money">27,000</td><td class="money">24,750</td><td class="money diff neg">−2,250</td></tr>
+        <tr><td>Balcony</td><td>Invisible Grill</td><td class="money">18,000</td><td class="money">18,000</td><td class="money diff zero">0</td></tr>
+        <tr><td>Balcony</td><td>Vertical Gardening (MS + Ply + Laminate)</td><td class="money">9,000</td><td class="money">8,960</td><td class="money diff neg">−40</td></tr>
 
-    <!-- CHILD BEDROOM -->
-    <tr class="area"><td colspan="7">CHILD BEDROOM</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Dresser unit in BWR Grade ply + Mirror with chamfer finish</td><td class="center">10</td><td class="center">Sqft</td><td class="right">₹1,450.00</td><td class="right">₹14,500.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Study unit with bookshelf in BWR garde Ply + laminate(3' x 1'), 1 drawer and study ledge, Openable storage (2' x 3')</td><td class="center">9</td><td class="center">Sqft</td><td class="right">₹1,250.00</td><td class="right">₹11,250.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Queen Size Bed with Hydraulic Storage of size 5'x 6'6\" in BWR Grade Ply + Laminate</td><td class="center">33</td><td class="center">Sqft</td><td class="right">₹1,221.21</td><td class="right">₹40,300.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Fabric</td><td>Upholstered bed back with fabric as per selection (5' X 2')</td><td class="center">10</td><td class="center">Sqft</td><td class="right">₹860.00</td><td class="right">₹8,600.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Side table with 1 drawer in BWR Grade ply + Laminate</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹4,200.00</td><td class="right">₹4,200.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Wallpapers</td><td>Wallpaper as per selection ranges upto 4000/-</td><td class="center">1</td><td class="center">Nos</td><td class="right">₹5,500.00</td><td class="right">₹5,500.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Sliding Wardrobe (6' x 7’) in BWR Grade Ply + Laminate - Max 4 Drawers and 4 shelfs</td><td class="center">42</td><td class="center">Sqft</td><td class="right">₹1,630.00</td><td class="right">₹68,460.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Overhead Loft Framing(6'x2') in BWR Grade Ply + Laminate</td><td class="center">12</td><td class="center">Sqft</td><td class="right">₹1,210.00</td><td class="right">₹14,520.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Side shelfs in BWR Grade ply + laminate finish</td><td class="center">8</td><td class="center">Sqft</td><td class="right">₹650.00</td><td class="right">₹5,200.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Mirror</td><td>Mirror with chamfer finish</td><td class="center">8</td><td class="center">Sqft</td><td class="right">₹530.00</td><td class="right">₹4,240.00</td></tr>
-    <tr><td>CHILD BEDROOM</td><td>Carpentary</td><td>Study unit with bookshelf in BWR garde Ply + laminate(3' x 1'), 1 drawer and study ledge, Openable storage (2' x 3') - 2nd</td><td class="center">9</td><td class="center">Sqft</td><td class="right">₹1,250.00</td><td class="right">₹11,250.00</td></tr>
+        <!-- KITCHEN (MODULAR) -->
+        <tr class="section-row"><td colspan="5">KITCHEN (MODULAR)</td></tr>
+        <tr><td>Kitchen</td><td>Modular Base Units – BWP Ply + Acrylic (Hettich)</td><td class="money">1,42,800</td><td class="money">1,45,125</td><td class="money diff pos">+2,325</td></tr>
+        <tr><td>Kitchen</td><td>Modular Overhead Units – BWR Ply + Acrylic</td><td class="money">46,200</td><td class="money">46,200</td><td class="money diff zero">0</td></tr>
+        <tr><td>Kitchen</td><td>Chimney Shutters – Acrylic</td><td class="money">3,000</td><td class="money">3,150</td><td class="money diff pos">+150</td></tr>
+        <tr><td>Kitchen</td><td>Modular Lofts – BWR Ply + Acrylic</td><td class="money">43,500</td><td class="money">43,500</td><td class="money diff zero">0</td></tr>
+        <tr><td>Kitchen</td><td>Modular Appliance Unit – BWR Ply + Acrylic</td><td class="money">21,000</td><td class="money">21,000</td><td class="money diff zero">0</td></tr>
+        <tr><td>Kitchen</td><td>Granite Provision</td><td class="money">6,000</td><td class="money">6,000</td><td class="money diff zero">0</td></tr>
 
-    <!-- OTHERS -->
-    <tr class="area"><td colspan="7">OTHERS</td></tr>
-    <tr><td>OTHERS</td><td>False ceiling</td><td>False Ceiling in full house</td><td class="center">468</td><td class="center">Sqft</td><td class="right">₹78.00</td><td class="right">₹36,504.00</td></tr>
-    <tr><td>OTHERS</td><td>False ceiling</td><td>Coves in false ceiling</td><td class="center">238</td><td class="center">Sqft</td><td class="right">₹68.00</td><td class="right">₹16,184.00</td></tr>
-    <tr><td>OTHERS</td><td>Electrical</td><td>Electrical Shifting & New Points + New light points (Incl. electrical material & wires etc.). Lights are not included</td><td class="center">45</td><td class="center">Sqft</td><td class="right">₹790.00</td><td class="right">₹35,550.00</td></tr>
-    <tr><td>OTHERS</td><td>Paint</td><td>Ceiling Paint, Tractor Emulsion</td><td class="center">624</td><td class="center">Sqft</td><td class="right">₹22.00</td><td class="right">₹13,728.00</td></tr>
-    <tr><td>OTHERS</td><td>Paint</td><td>Wall Paint, Luster Paint</td><td class="center">1373</td><td class="center">Sqft</td><td class="right">₹30.00</td><td class="right">₹41,184.00</td></tr>
-    <tr><td>OTHERS</td><td>Carpentary</td><td>Vanity in BWP ply + Laminate finish common basin</td><td class="center">10</td><td class="center">Sqft</td><td class="right">₹1,400.00</td><td class="right">₹14,000.00</td></tr>
-    <tr><td>OTHERS</td><td>Glass</td><td>Mirror with chamfer finish</td><td class="center">10</td><td class="center">Sqft</td><td class="right">₹530.00</td><td class="right">₹5,300.00</td></tr>
-    <tr><td>OTHERS</td><td>Design</td><td>All 3D and 2D working drawings</td><td class="center">1</td><td class="center">No</td><td class="right">₹25,000.00</td><td class="right">₹25,000.00</td></tr>
-    <tr><td>OTHERS</td><td>Floor Protection</td><td>2mm Bubble sheet cover on all carpet area</td><td class="center">1</td><td class="center">No</td><td class="right">₹5,000.00</td><td class="right">₹5,000.00</td></tr>
-    <tr><td>OTHERS</td><td>Debris Removal</td><td>Debris Removal</td><td class="center">2</td><td class="center">No</td><td class="right">₹3,500.00</td><td class="right">₹7,000.00</td></tr>
+        <!-- MASTER BEDROOM -->
+        <tr class="section-row"><td colspan="5">MASTER BEDROOM</td></tr>
+        <tr><td>Master Bedroom</td><td>Queen Size Bed (Hydraulic, 5’×6’6’’)</td><td class="money">40,000</td><td class="money">—</td><td class="money diff neg">−40,000</td></tr>
+        <tr><td>Master Bedroom</td><td>Upholstered Bed Back (5’×2’)</td><td class="money">8,000</td><td class="money">—</td><td class="money diff neg">−8,000</td></tr>
+        <tr><td>Master Bedroom</td><td>Sliding Wardrobe (6’×7’, 4 drawers/shelves)</td><td class="money">67,200</td><td class="money">—</td><td class="money diff neg">−67,200</td></tr>
+        <tr><td>Master Bedroom</td><td>Overhead Loft Framing (6’×2’)</td><td class="money">14,400</td><td class="money">—</td><td class="money diff neg">−14,400</td></tr>
+        <tr><td>Master Bedroom</td><td>Side Shelves – BWR Ply + Laminate</td><td class="money">5,400</td><td class="money">—</td><td class="money diff neg">−5,400</td></tr>
+        <tr><td>Master Bedroom</td><td>Dresser Unit – BWR Ply + Mirror (Chamfer)</td><td class="money">14,400</td><td class="money">—</td><td class="money diff neg">−14,400</td></tr>
+        <tr><td>Master Bedroom</td><td>Study Unit + Bookshelf + Storage</td><td class="money">11,000</td><td class="money">—</td><td class="money diff neg">−11,000</td></tr>
+        <tr><td>Master Bedroom</td><td>Vanity – BWP Ply + Laminate (common basin)</td><td class="money">14,000</td><td class="money">14,000</td><td class="money diff zero">0</td></tr>
+        <tr><td>Master Bedroom</td><td>Mirror with Chamfer Finish</td><td class="money">5,200</td><td class="money">5,300</td><td class="money diff pos">+100</td></tr>
 
-    <!-- Totals -->
-    <tr>
-      <td colspan="6" class="right"><strong>Sub-Total</strong></td>
-      <td class="right"><strong>₹1,259,625.00</strong></td>
-    </tr>
-    <tr>
-      <td colspan="6" class="right">Discount</td>
-      <td class="right">₹62,981.25</td>
-    </tr>
-    <tr>
-      <td colspan="6" class="right"><strong>Net (Before GST)</strong></td>
-      <td class="right"><strong>₹1,196,643.75</strong></td>
-    </tr>
-    </tbody>
-  </table>
+        <!-- CHILD BEDROOM -->
+        <tr class="section-row"><td colspan="5">CHILD BEDROOM</td></tr>
+        <tr><td>Child Bedroom</td><td>Queen Size Bed (Hydraulic, 5’×6’6’’)</td><td class="money">—</td><td class="money">40,300</td><td class="money diff pos">+40,300</td></tr>
+        <tr><td>Child Bedroom</td><td>Upholstered Bed Back (5’×2’)</td><td class="money">—</td><td class="money">8,600</td><td class="money diff pos">+8,600</td></tr>
+        <tr><td>Child Bedroom</td><td>Sliding Wardrobe (6’×7’, 4 drawers/shelves)</td><td class="money">—</td><td class="money">68,460</td><td class="money diff pos">+68,460</td></tr>
+        <tr><td>Child Bedroom</td><td>Overhead Loft Framing (6’×2’)</td><td class="money">—</td><td class="money">14,520</td><td class="money diff pos">+14,520</td></tr>
+        <tr><td>Child Bedroom</td><td>Side Shelves – BWR Ply + Laminate</td><td class="money">—</td><td class="money">5,200</td><td class="money diff pos">+5,200</td></tr>
+        <tr><td>Child Bedroom</td><td>Dresser Unit – BWR Ply + Mirror (Chamfer)</td><td class="money">—</td><td class="money">14,500</td><td class="money diff pos">+14,500</td></tr>
+        <tr><td>Child Bedroom</td><td>Study Unit + Bookshelf + Storage</td><td class="money">—</td><td class="money">11,250</td><td class="money diff pos">+11,250</td></tr>
 
-  <p class="notes"><strong>Notes:</strong> Rates above are applicable only for 1 month. Advance payment 30% before start of the work. GST will be additional @ 18%. Dimensions are approximate — may revise after final drawings. Material specs: BWR/BWP Ply IS 303/710 (18mm/12mm/8mm), 1mm Laminate (Merino/Greenlam). Hettich soft-close hinges & telescopic channels.</p>
+        <!-- OTHERS -->
+        <tr class="section-row"><td colspan="5">OTHERS</td></tr>
+        <tr><td>Others</td><td>Wallpaper (per selection, upto ₹4,000)</td><td class="money">5,000</td><td class="money">5,500</td><td class="money diff pos">+500</td></tr>
+        <tr><td>Others</td><td>False Ceiling – Full House</td><td class="money">35,000</td><td class="money">36,504</td><td class="money diff pos">+1,504</td></tr>
+        <tr><td>Others</td><td>False Ceiling – Cove</td><td class="money">16,000</td><td class="money">16,184</td><td class="money diff pos">+184</td></tr>
+        <tr><td>Others</td><td>Electrical Work (shifting + new points incl. wiring)</td><td class="money">35,000</td><td class="money">35,550</td><td class="money diff pos">+550</td></tr>
+        <tr><td>Others</td><td>Painting – Ceiling (Tractor Emulsion)</td><td class="money">13,500</td><td class="money">13,728</td><td class="money diff pos">+228</td></tr>
+        <tr><td>Others</td><td>Painting – Wall (Luster Paint)</td><td class="money">41,000</td><td class="money">41,184</td><td class="money diff pos">+184</td></tr>
+        <tr><td>Others</td><td>3D/2D Working Drawings</td><td class="money">20,000</td><td class="money">20,000</td><td class="money diff zero">0</td></tr>
+        <tr><td>Others</td><td>Floor Protection – 2mm Bubble Sheet</td><td class="money">5,000</td><td class="money">5,000</td><td class="money diff zero">0</td></tr>
+        <tr><td>Others</td><td>Debris Removal</td><td class="money">7,000</td><td class="money">7,000</td><td class="money diff zero">0</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">
+    <strong>Notes:</strong> (1) Amounts shown as “—” indicate the line wasn’t present in that quote. (2) Master vs Child Bedroom
+    furniture appears under different sections between the two vendors; here they are shown under both sections to make the
+    difference explicit. (3) Grand Totals above include all rows.
+    <span class="badge">Diff = PDF − Excel</span>
+  </p>
+</div>
 </body>
 </html>
